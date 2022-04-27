@@ -1,0 +1,450 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+html body {
+  width: 100vw;
+  height: 100vh;
+  transition: 0.25s;
+}
+html body header {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: fixed;
+  z-index: 1;
+  -webkit-animation-name: header;
+          animation-name: header;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.18, 0.53, 0.08, 0.99);
+          animation-timing-function: cubic-bezier(0.18, 0.53, 0.08, 0.99);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  will-change: animation;
+  transition: 0.4s;
+  z-index: 2;
+}
+html body header .header-button {
+  box-sizing: border-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  background-color: black;
+  border: none;
+  -webkit-animation-name: header-button;
+          animation-name: header-button;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  will-change: animation;
+  transition: 0.25s;
+  cursor: pointer;
+}
+html body header .header-button:hover .button-content {
+  border: 1px solid lightblue;
+}
+html body header .header-button .button-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: 0.25s;
+  border: 1px solid transparent;
+}
+html body header .header-button .button-content .border-one {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 1px;
+  border-radius: 20px;
+  background-color: white;
+  transition: 0.4s;
+}
+html body header .header-button .button-content .border-two-one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 1px;
+  border-radius: 20px;
+  background-color: white;
+  transition: 0.4s;
+}
+html body header .header-button .button-content .border-two-two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 1px;
+  border-radius: 20px;
+  background-color: white;
+  transition: 0.4s;
+}
+html body header .header-button .button-content .border-three {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 1px;
+  border-radius: 20px;
+  background-color: white;
+  transition: 0.4s;
+}
+html body header .header-content {
+  position: absolute;
+  right: 0;
+  width: 650px;
+  height: 100vh;
+  top: 50px;
+  opacity: 0;
+  transition: 0.4s;
+}
+html body header .header-content .header-one {
+  margin: 0 50px;
+  width: calc(100% - 100px);
+  height: 50px;
+  border-bottom: 2px solid white;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+html body header .header-content .header-one:hover {
+  background-color: rgba(211, 211, 211, 0.35);
+}
+html body header .header-content .header-two {
+  margin: 0 50px;
+  width: calc(100% - 100px);
+  height: 50px;
+  border-bottom: 2px solid white;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+html body header .header-content .header-two:hover {
+  background-color: rgba(211, 211, 211, 0.35);
+}
+html body header .header-content .header-three {
+  margin: 0 50px;
+  width: calc(100% - 100px);
+  height: 50px;
+  border-bottom: 2px solid white;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+html body header .header-content .header-three:hover {
+  background-color: rgba(211, 211, 211, 0.35);
+}
+html body header .header-content .header-four {
+  margin: 0 50px;
+  width: calc(100% - 100px);
+  height: 50px;
+  border-bottom: 2px solid white;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+html body header .header-content .header-four:hover {
+  background-color: rgba(211, 211, 211, 0.35);
+}
+html body header .dark-mode-off {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  fill: white;
+  -webkit-animation-name: header-button;
+          animation-name: header-button;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  will-change: animation;
+  transition: 0.25s;
+  cursor: pointer;
+}
+html body header .dark-mode-off .dark-mode-off-op {
+  transition: 0.25s;
+}
+html body header .dark-mode-on {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  fill: white;
+  -webkit-animation-name: header-button;
+          animation-name: header-button;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  will-change: animation;
+  transition: 0.25s;
+  cursor: pointer;
+}
+html body header .dark-mode-on .dark-mode-on-op {
+  transition: 0.25s;
+  opacity: 0;
+}
+html body header .dark-mode-button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  fill: white;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  -webkit-animation-name: header-button;
+          animation-name: header-button;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  will-change: animation;
+  transition: 0.25s;
+  cursor: pointer;
+}
+html body header .dark-mode-button:hover {
+  border: 1px solid lightblue;
+}
+html body main {
+  width: calc(100vw - 50px);
+  height: 100vh;
+  margin-left: 50px;
+  position: relative;
+}
+html body main .main-page {
+  width: 100%;
+  height: 100%;
+}
+html body main .main-page .txt {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 2rem;
+  font-weight: lighter;
+  transition: 0.25s;
+}
+html body main .main-page .main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 0;
+}
+html body main .main-page .main-content .main-one {
+  display: inline-block;
+  width: calc((100vw - 50px) / 7);
+  height: calc((100vw - 50px) / 7);
+  margin-right: calc((100vw - 50px) / 7);
+  margin-left: calc((100vw - 50px) / 7);
+  background-color: #c6e6ef;
+  cursor: pointer;
+}
+html body main .main-page .main-content .main-two {
+  display: inline-block;
+  width: calc((100vw - 50px) / 7);
+  height: calc((100vw - 50px) / 7);
+  margin-right: calc((100vw - 50px) / 7);
+  background-color: #B7D7B6;
+  cursor: pointer;
+}
+html body main .main-page .main-content .main-three {
+  display: inline-block;
+  width: calc((100vw - 50px) / 7);
+  height: calc((100vw - 50px) / 7);
+  margin-right: calc((100vw - 50px) / 7);
+  background-color: #f4d8e4;
+  cursor: pointer;
+}
+html body main .content-one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: white;
+  transition: 0.25s;
+}
+html body main .content-one .txt {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
+  transition: 0.25s;
+}
+html body main .content-one .color-one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 40vh;
+  background-color: #c6e6ef;
+}
+html body main .content-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: white;
+  transition: 0.25s;
+}
+html body main .content-two .txt {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
+  transition: 0.25s;
+}
+html body main .content-two .color-one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 40vh;
+  background-color: #B7D7B6;
+}
+html body main .content-three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: white;
+  transition: 0.25s;
+}
+html body main .content-three .txt {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
+  transition: 0.25s;
+}
+html body main .content-three .color-one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 40vh;
+  background-color: #f4d8e4;
+}
+
+@-webkit-keyframes header {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(50px - 100vw);
+  }
+}
+
+@keyframes header {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(50px - 100vw);
+  }
+}
+@-webkit-keyframes header-button {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes header-button {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */

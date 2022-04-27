@@ -1,0 +1,404 @@
+    * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    html {
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
+        body {
+            width: 100vw;
+            height: 100vh;
+            transition: 0.25s;
+            header {
+                height: 100vh;
+                width: 100vw;
+                background-color: black;
+                position: fixed;
+                z-index: 1;
+                animation-name: header;
+                animation-delay: 0.5s;
+                animation-duration: 1s;
+                animation-timing-function: cubic-bezier(.18, .53, .08, .99);
+                animation-fill-mode: both;
+                will-change: animation;
+                transition: 0.4s;
+                z-index: 2;
+                .header-button {
+                    box-sizing: border-box;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: 0;
+                    right: 0;
+                    background-color: black;
+                    border: none;
+                    animation-name: header-button;
+                    animation-delay: 0.5s;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: both;
+                    will-change: animation;
+                    transition: 0.25s;
+                    cursor: pointer;
+                    &:hover .button-content {
+                        border: 1px solid lightblue;
+                    }
+                    .button-content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 34px;
+                        height: 34px;
+                        border-radius: 50%;
+                        transition: 0.25s;
+                        border: 1px solid transparent;
+                        .border-one {
+                            position: absolute;
+                            top: 25%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 70%;
+                            height: 1px;
+                            border-radius: 20px;
+                            background-color: white;
+                            transition: 0.4s;
+                        }
+                        .border-two-one {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 70%;
+                            height: 1px;
+                            border-radius: 20px;
+                            background-color: white;
+                            transition: 0.4s;
+                        }
+                        .border-two-two {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 70%;
+                            height: 1px;
+                            border-radius: 20px;
+                            background-color: white;
+                            transition: 0.4s;
+                        }
+                        .border-three {
+                            position: absolute;
+                            bottom: 25%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 70%;
+                            height: 1px;
+                            border-radius: 20px;
+                            background-color: white;
+                            transition: 0.4s;
+                        }
+                    }
+                }
+                .header-content {
+                    position: absolute;
+                    right: 0;
+                    width: 650px;
+                    height: 100vh;
+                    top: 50px;
+                    opacity: 0;
+                    transition: 0.4s;
+                    .header-one {
+                        margin: 0 50px;
+                        width: calc(100% - 100px);
+                        height: 50px;
+                        border-bottom: 2px solid white;
+                        color: white;
+                        text-align: center;
+                        line-height: 50px;
+                        transition: 0.25s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgba(211, 211, 211, 0.35);
+                        }
+                    }
+                    .header-two {
+                        margin: 0 50px;
+                        width: calc(100% - 100px);
+                        height: 50px;
+                        border-bottom: 2px solid white;
+                        color: white;
+                        text-align: center;
+                        line-height: 50px;
+                        transition: 0.25s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgba(211, 211, 211, 0.35);
+                        }
+                    }
+                    .header-three {
+                        margin: 0 50px;
+                        width: calc(100% - 100px);
+                        height: 50px;
+                        border-bottom: 2px solid white;
+                        color: white;
+                        text-align: center;
+                        line-height: 50px;
+                        transition: 0.25s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgba(211, 211, 211, 0.35);
+                        }
+                    }
+                    .header-four {
+                        margin: 0 50px;
+                        width: calc(100% - 100px);
+                        height: 50px;
+                        border-bottom: 2px solid white;
+                        color: white;
+                        text-align: center;
+                        line-height: 50px;
+                        transition: 0.25s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgba(211, 211, 211, 0.35);
+                        }
+                    }
+                }
+                .dark-mode-off {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    bottom: 0;
+                    right: 0;
+                    fill: white;
+                    animation-name: header-button;
+                    animation-delay: 0.5s;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: both;
+                    will-change: animation;
+                    transition: 0.25s;
+                    cursor: pointer;
+                    .dark-mode-off-op {
+                        transition: 0.25s;
+                    }
+                }
+                .dark-mode-on {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    bottom: 0;
+                    right: 0;
+                    fill: white;
+                    animation-name: header-button;
+                    animation-delay: 0.5s;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: both;
+                    will-change: animation;
+                    transition: 0.25s;
+                    cursor: pointer;
+                    .dark-mode-on-op {
+                        transition: 0.25s;
+                        opacity: 0;
+                    }
+                }
+                .dark-mode-button {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    bottom: 0;
+                    right: 0;
+                    fill: white;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    animation-name: header-button;
+                    animation-delay: 0.5s;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: both;
+                    will-change: animation;
+                    transition: 0.25s;
+                    cursor: pointer;
+                    &:hover {
+                        border: 1px solid lightblue;
+                    }
+                }
+            }
+            main {
+                width: calc(100vw - 50px);
+                height: 100vh;
+                margin-left: 50px;
+                position: relative;
+                .main-page {
+                    width: 100%;
+                    height: 100%;
+                    .txt {
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        font-size: 2rem;
+                        font-weight: lighter;
+                        transition: 0.25s;
+                    }
+                    .main-content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 100%;
+                        transform: translate(-50%, -50%);
+                        font-size: 0;
+                        .main-one {
+                            display: inline-block;
+                            width: calc((100vw - 50px) / 7);
+                            height: calc((100vw - 50px) / 7);
+                            margin-right: calc((100vw - 50px) / 7);
+                            margin-left: calc((100vw - 50px) / 7);
+                            background-color: #c6e6ef;
+                            cursor: pointer;
+                        }
+                        .main-two {
+                            display: inline-block;
+                            width: calc((100vw - 50px) / 7);
+                            height: calc((100vw - 50px) / 7);
+                            margin-right: calc((100vw - 50px) / 7);
+                            background-color: #B7D7B6;
+                            cursor: pointer;
+                        }
+                        .main-three {
+                            display: inline-block;
+                            width: calc((100vw - 50px) / 7);
+                            height: calc((100vw - 50px) / 7);
+                            margin-right: calc((100vw - 50px) / 7);
+                            background-color: #f4d8e4;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .content-one {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                    background-color: white;
+                    transition: 0.25s;
+                    .txt {
+                        position: absolute;
+                        top: 10vh;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: lighter;
+                        transition: 0.25s;
+                    }
+                    .color-one {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100vw;
+                        height: 40vh;
+                        background-color: #c6e6ef;
+                    }
+                }
+                .content-two {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                    background-color: white;
+                    transition: 0.25s;
+                    .txt {
+                        position: absolute;
+                        top: 10vh;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: lighter;
+                        transition: 0.25s;
+                    }
+                    .color-one {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100vw;
+                        height: 40vh;
+                        background-color: #B7D7B6;
+                    }
+                }
+                .content-three {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                    background-color: white;
+                    transition: 0.25s;
+                    .txt {
+                        position: absolute;
+                        top: 10vh;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: lighter;
+                        transition: 0.25s;
+                    }
+                    .color-one {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100vw;
+                        height: 40vh;
+                        background-color: #f4d8e4;
+                    }
+                }
+            }
+        }
+    }
+    
+    @keyframes header {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: calc(50px - 100vw);
+        }
+    }
+    
+    @keyframes header-button {
+        0% {
+            opacity: 0;
+        }
+        90% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
