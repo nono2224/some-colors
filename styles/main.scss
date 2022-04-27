@@ -10,9 +10,11 @@
         body {
             width: 100vw;
             height: 100vh;
+            height: 100dvh;
             transition: 0.25s;
             header {
                 height: 100vh;
+                height: 100dvh;
                 width: 100vw;
                 background-color: black;
                 position: fixed;
