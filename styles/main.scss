@@ -168,6 +168,34 @@
                         }
                     }
                 }
+                .home-button {
+                    position: absolute;
+                    top: 50px;
+                    right: 0;
+                    width: 50px;
+                    height: 50px;
+                    fill: white;
+                    border-radius: 50%;
+                    border: solid 1px transparent;
+                    animation-name: header-button;
+                    animation-delay: 0.5s;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: both;
+                    will-change: animation;
+                    transition: 0.25s;
+                    &:hover {
+                        border: 1px solid lightblue;
+                    }
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        path {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
                 .dark-mode-off {
                     position: absolute;
                     width: 50px;

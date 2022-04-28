@@ -182,6 +182,39 @@ html body header .header-content .header-four {
 html body header .header-content .header-four:hover {
   background-color: rgba(211, 211, 211, 0.35);
 }
+html body header .home-button {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  fill: white;
+  border-radius: 50%;
+  border: solid 1px transparent;
+  -webkit-animation-name: header-button;
+          animation-name: header-button;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  will-change: animation;
+  transition: 0.25s;
+}
+html body header .home-button:hover {
+  border: 1px solid lightblue;
+}
+html body header .home-button svg {
+  width: 100%;
+  height: 100%;
+}
+html body header .home-button svg path {
+  width: 100%;
+  height: 100%;
+}
 html body header .dark-mode-off {
   position: absolute;
   width: 50px;

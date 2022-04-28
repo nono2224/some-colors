@@ -7,6 +7,7 @@ $(".main-one").on("click", main_one);
 $(".main-two").on("click", main_two);
 $(".main-three").on("click", main_three);
 $(".dark-mode-button").on("click", dark_mode);
+$(".home-button").on("click", header_one)
 
 var header_oc_check = 0;
 
